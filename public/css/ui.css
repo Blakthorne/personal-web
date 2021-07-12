@@ -6,6 +6,8 @@
     --content-mid: 7;
     --content-end: 12;
     --footer-height: 150px;
+    --serif-font: adobe-caslon-pro, serif;
+    --sans-serif-font: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -32,13 +34,14 @@ a:link, a:visited, a:hover, a:active {
 .header-name {
     grid-column: calc(var(--content-start) + 1) / var(--content-mid);
     grid-row: 1;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--sans-serif-font);
     font-size: 3vw;
     font-style: normal;
     font-weight: bolder;
     height: auto;
     text-align: left;
     text-shadow: 1px 1px 4px gray;
+    padding-top: 30px;
 }
 
 #header-nav-mobile {
@@ -46,20 +49,20 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #header-nav {
-    grid-column: var(--content-mid) / calc(var(--content-end) - 1);
+    grid-column: calc(var(--content-mid) - 2) / calc(var(--content-end) - 1);
     grid-row: 1;
     text-align: right;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2vw;
+    font-family: var(--sans-serif-font);
+    font-size: 1.3vw;
     font-style: normal;
-    font-weight: bolder;
+    padding-top: 30px;
 }
 
 .banner-name {
     grid-column: var(--content-start) / var(--content-end);
     grid-row: 2;
     font-size: 6vw;
-    font-family: adobe-caslon-pro, serif;
+    font-family: var(--serif-font);
     text-align: center;
     height: auto;
     text-shadow: 1px 1px 2px gray;
@@ -69,7 +72,7 @@ a:link, a:visited, a:hover, a:active {
 .banner-info {
     grid-column: calc(var(--content-start) + 3) / calc(var(--content-end) - 3);
     grid-row: 3;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--sans-serif-font);
     font-size: 1vw;
     text-align: center;
     line-height: 1.5;
@@ -110,14 +113,14 @@ a:link, a:visited, a:hover, a:active {
 .title {
     grid-row: 2;
     font-size: 3vw;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--sans-serif-font);
     padding-top: 5%;
 }
 
 .info {
     grid-row: 3;
     font-size: 1.5vw;
-    font-family: adobe-caslon-pro, serif;
+    font-family: var(--serif-font);
     padding-top: 1.5vw;
     padding-left: 1vw;
     padding-right: 1vw;
@@ -205,6 +208,15 @@ a:link, a:visited, a:hover, a:active {
     width: 30px;
 }
 
+.header-image {
+    grid-column: var(--content-start) / var(--content-end);
+    grid-row: 2;
+    width: 30vw;
+    margin: auto;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px black;
+}
+
 @media (max-width: 1000px) {
     .header-name {
         display: none !important;
@@ -219,10 +231,9 @@ a:link, a:visited, a:hover, a:active {
         grid-column:  1 / 13;
         text-align: center;
         font-size: 4.8vw;
-        font-family: 'Raleway', sans-serif;
+        font-family: var(--sans-serif-font);
         font-style: normal;
-        font-weight: bolder;
-        line-height: 1.5;
+        line-height: 2;
         padding-top: 20px;
     }
 
@@ -240,7 +251,7 @@ a:link, a:visited, a:hover, a:active {
     .banner-info-mobile {
         display: block !important;
         grid-column: var(--content-start) / var(--content-end);
-        font-size: 3.4vw;
+        font-size: 3.2vw;
         line-height: 2;
         font-family: 'Raleway', sans-serif;
         padding-top: 1em;
