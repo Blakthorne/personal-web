@@ -1,15 +1,9 @@
 document.getElementById("header-nav").innerHTML =
- '<a href="/about-me/">About Me</a>' + ' • ' +
- '<a href="/musician/">Musician</a>' + ' • ' +
- '<a href="/programmer/">Programmer</a>' + ' • ' +
- '<a href="/learner/">Learner</a>';
+ '<a href="/about-me/">About Me</a>';
 
  document.getElementById("header-nav-mobile").innerHTML =
  '<a href="/">Home</a>' + ' • ' + 
- '<a href="/about-me/">About Me</a>' + ' <br> ' +
- '<a href="/musician/">Musician</a>' + ' • ' +
- '<a href="/programmer/">Programmer</a>' + ' • ' +
- '<a href="/learner/">Learner</a>';
+ '<a href="/about-me/">About Me</a>';
 
  document.getElementById("footer").innerHTML =
  '<a class="email" href="mailto:dlpolar38@gmail.com">dlpolar38@gmail.com</a>' +
