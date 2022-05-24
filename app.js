@@ -18,8 +18,8 @@ app.get('/musician/', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/musician.html'));
 })
 
-app.get('/programmer/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/programmer.html'));
+app.get('/developer/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/views/developer.html'));
 })
 
 app.get('/learner/', (req, res) => {
