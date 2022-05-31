@@ -1,16 +1,21 @@
-document.getElementById("header-nav").innerHTML =
- '<a href="/about-me/">About Me</a>';
+document.getElementById("header").innerHTML =
+'<a href="/">' +
+      '<img id="logo" src="/images/icon.svg" alt="icon">' +
+'</a>' +
+'<nav id="header-nav">' +
+'<a id="header-nav" href="/about-me/">ABOUT ME</a>' +
+'</nav>';
 
- document.getElementById("header-nav-mobile").innerHTML =
- '<a href="/">Home</a>' + ' • ' + 
- '<a href="/about-me/">About Me</a>';
+document.getElementById("header-nav-mobile").innerHTML =
+'<a href="/">Home</a>' + ' • ' + 
+'<a href="/about-me/">About Me</a>';
 
- document.getElementById("footer").innerHTML =
- '<a class="email" href="mailto:dlpolar38@gmail.com">dlpolar38@gmail.com</a>' +
- '<div class="break"></div>' +
- '<a class="in-icon" href="https://www.linkedin.com/in/davidpolar789/" target="_blank" rel="noopener noreferrer">' +
-    '<img src="/images/in.png">' +
- '</a>' +
- '<a class="github-icon" href="https://github.com/Blakthorne" target="_blank" rel="noopener noreferrer">' +
-    '<img src="/images/github.png">' +
- '</a>';
+document.getElementById("footer").innerHTML =
+'<a class="email" href="mailto:dlpolar38@gmail.com">dlpolar38@gmail.com</a>' +
+'<div class="break"></div>' +
+'<a class="in-icon" href="https://www.linkedin.com/in/davidpolar789/" target="_blank" rel="noopener noreferrer">' +
+   '<img src="/images/in.png">' +
+'</a>' +
+'<a class="github-icon" href="https://github.com/Blakthorne" target="_blank" rel="noopener noreferrer">' +
+   '<img src="/images/github.png">' +
+'</a>';
