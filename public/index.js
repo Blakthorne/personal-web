@@ -3,12 +3,9 @@ document.getElementById("header").innerHTML =
       '<img id="logo" src="/images/icon.svg" alt="icon">' +
 '</a>' +
 '<nav id="header-nav">' +
-'<a id="header-nav" href="/about-me/">ABOUT ME</a>' +
+'<a href="/about-me/" id="about-me-nav">ABOUT ME</a>' +
+'<a href="/portfolio/" id="portfolio-nav">PORTFOLIO</a>' +
 '</nav>';
-
-document.getElementById("header-nav-mobile").innerHTML =
-'<a href="/">Home</a>' + ' • ' + 
-'<a href="/about-me/">About Me</a>';
 
 document.getElementById("footer").innerHTML =
 '<a class="email" href="mailto:dlpolar38@gmail.com">dlpolar38@gmail.com</a>' +
