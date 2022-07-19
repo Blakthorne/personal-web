@@ -214,6 +214,10 @@ a:link, a:visited, a:hover, a:active {
     width: 30px;
 }
 
+.instagram-icon > img {
+    width: 30px;
+}
+
 .header-image {
     grid-column: 5 / 9;
     grid-row: 2;
@@ -250,7 +254,7 @@ a:link, a:visited, a:hover, a:active {
     hyphens: auto;
 }
 
-#developer-head {
+#developer {
     grid-row: 3;
 }
 
@@ -258,7 +262,7 @@ a:link, a:visited, a:hover, a:active {
     grid-row: 4;
 }
 
-#musician-head {
+#musician {
     grid-row: 5;
 }
 
@@ -266,7 +270,7 @@ a:link, a:visited, a:hover, a:active {
     grid-row: 6;
 }
 
-#learner-head {
+#learner {
     grid-row: 7;
 }
 
@@ -289,7 +293,7 @@ a:link, a:visited, a:hover, a:active {
     font-variant-caps: small-caps;
     font-weight: 200;
     margin-bottom: 40px;
-    margin-top: 60px;
+    margin-top: 40px;
     color: var(--light);
 }
 
@@ -303,9 +307,10 @@ a:link, a:visited, a:hover, a:active {
 .portfolio-card-head {
     grid-column: 1;
     grid-row: 1;
-    font-family: var(--serif-font);
+    font-family: var(--sans-serif-font);
     font-size: 2em;
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .portfolio-card-desc {
@@ -479,7 +484,7 @@ a:link, a:visited, a:hover, a:active {
     }
     
     .portfolio-card-desc {
-        font-size: 1.1em;
+        font-size: 1.15em;
     }
 
     .portfolio-card-button-holder {
@@ -648,7 +653,6 @@ a:link, a:visited, a:hover, a:active {
     .portfolio-heading {
         grid-column: 1;
         text-align: center;
-        font-family: var(--sans-serif-font);
         font-size: 8.17vw;
         margin-bottom: 40px;
         margin-top: 60px;
@@ -659,48 +663,32 @@ a:link, a:visited, a:hover, a:active {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        margin-bottom: 20px;
     }
     
     .portfolio-card-head {
         grid-column: 1;
         grid-row: 1;
-        font-family: var(--serif-font);
         text-align: center;
         font-size: 6vw;
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
     
     .portfolio-card-pic {
         grid-column: 1;
         grid-row: 2;
-        margin: auto;
         height: 45vw;
-        box-shadow: 0px 0px 20px 0px rgb(119, 119, 119);
         margin-bottom: 30px;
     }
     
     .portfolio-card-desc {
         grid-column: 1;
         grid-row: 3;
-        font-family: var(--serif-font);
         font-size: 1.15em;
-        line-height: 1.45;
-        margin-top: 0;
     }
     
     .portfolio-card-button-holder {
         grid-column: 1;
         grid-row: 4;
-        text-align: center;
         font-size: 1.3em;
-        font-family: var(--sans-serif-font);
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    
-    .portfolio-card-button:hover {
-        color: var(--color);
+        padding: 15px;
     }
 }

@@ -15,4 +15,7 @@ document.getElementById("footer").innerHTML =
 '</a>' +
 '<a class="github-icon" href="https://github.com/Blakthorne" target="_blank" rel="noopener noreferrer">' +
    '<img src="/images/github.png">' +
+'</a>' +
+'<a class="instagram-icon" href="https://www.instagram.com/daves.trombone/" target="_blank" rel="noopener noreferrer">' +
+   '<img src="/images/instagram.svg">' +
 '</a>';
