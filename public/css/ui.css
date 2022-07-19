@@ -6,8 +6,10 @@
     --content-start: 2;
     --content-mid: 7;
     --content-end: 12;
+    --text-start: 4;
+    --text-end: 10;
     --footer-height: 150px;
-    --serif-font: adobe-caslon-pro, serif;
+    --serif-font: 'adobe-caslon-pro', serif;
     --sans-serif-font: 'Noto Sans', sans-serif;
 }
 
@@ -32,7 +34,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 #header {
-    grid-column: calc(var(--content-start) + 1) / calc(var(--content-end) - 1);
+    grid-column: calc(var(--content-start)) / calc(var(--content-end));
     grid-row: 1;
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -47,7 +49,6 @@ a:link, a:visited, a:hover, a:active {
     font-size: 2em;
     font-style: normal;
     padding-top: 40px;
-    font-weight: bolder;
 }
 
 #logo {
@@ -60,12 +61,14 @@ a:link, a:visited, a:hover, a:active {
 #about-me-nav {
     grid-column: 2;
     grid-row: 1;
+    font-variant-caps: small-caps;
 }
 
 #portfolio-nav {
     grid-column: 2;
     grid-row: 1;
     padding-left: 30px;
+    font-variant-caps: small-caps;
 }
 
 .banner-name {
@@ -123,6 +126,10 @@ a:link, a:visited, a:hover, a:active {
     font-size: 3.5em;
     font-family: var(--sans-serif-font);
     padding-top: 5%;
+    color: var(--light);
+    font-weight: 200;
+    font-variant-caps: small-caps;
+    letter-spacing: 3px;
 }
 
 .info {
@@ -132,7 +139,7 @@ a:link, a:visited, a:hover, a:active {
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    line-height: 1.5;
+    line-height: 1.45;
 }
 
 .musician.icon > img {
@@ -219,32 +226,132 @@ a:link, a:visited, a:hover, a:active {
     background-image: url("/images/profile/square-pic-50.webp");
     border-radius: 100%;
     box-shadow: 10px 15px 50px 20px rgb(119, 119, 119);
+    margin-bottom: 50px;
 }
 
 .bio-heading {
-    text-align: center;
+    grid-column: var(--text-start) / var(--text-end);
+    text-align: left;
+    font-family: var(--sans-serif-font);
+    font-size: 2.3em;
+    font-weight: 100;
+    color: var(--light);
+    margin-bottom: -15px;
+    font-variant-caps: small-caps;
+    letter-spacing: 3px;
+}
+
+.bio-paragraph {
+    grid-column: var(--text-start) / var(--text-end);
+    text-align: left;
+    font-family: var(--serif-font);
+    font-size: 1.5em;
+    line-height: 1.45;
+    hyphens: auto;
+}
+
+#developer-head {
+    grid-row: 3;
+}
+
+#developer-paragraph {
+    grid-row: 4;
+}
+
+#musician-head {
+    grid-row: 5;
+}
+
+#musician-paragraph {
+    grid-row: 6;
+}
+
+#learner-head {
+    grid-row: 7;
+}
+
+#learner-paragraph {
+    grid-row: 8;
+}
+
+.portfolio-grid {
+    grid-column: var(--content-start) / var(--content-end);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.portfolio-heading {
+    grid-column: 1;
+    text-align: left;
     font-family: var(--sans-serif-font);
     font-size: 3em;
+    font-variant-caps: small-caps;
+    font-weight: 200;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    color: var(--light);
 }
 
-#developer_head {
-    grid-column: var(--content-start) / var(--content-end);
+.portfolio-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    margin-bottom: 20px;
+}
+
+.portfolio-card-head {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: var(--serif-font);
+    font-size: 2em;
+    padding-top: 15px;
+}
+
+.portfolio-card-desc {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: var(--serif-font);
+    font-size: 1.5em;
+    line-height: 1.45;
+    margin-top: 0;
+    padding-right: 25px;
+}
+
+.portfolio-card-button-holder {
+    grid-column: 1;
     grid-row: 3;
     text-align: center;
+    margin: auto;
+    font-size: 1.5em;
+    font-family: var(--sans-serif-font);
+    margin-bottom: 15px;
 }
 
-#musician_head {
-    grid-column: var(--content-start) / var(--content-end);
-    grid-row: 4;
-    text-align: center;
+.portfolio-card-button-holder:hover {
+    color: var(--color);
 }
 
-#learner_head {
-    grid-column: var(--content-start) / var(--content-end);
-    grid-row: 5;
-    text-align: center;
+.portfolio-card-button-holder:hover .portfolio-button-arrow {
+    padding-left: 10px;
 }
 
+.portfolio-card-button {
+    display: inline;
+}
+
+.portfolio-button-arrow {
+    display: inline;
+    transition: padding-left .1s linear 0s;
+}
+
+.portfolio-card-pic {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    margin: auto;
+    height: 300px;
+    box-shadow: 0px 0px 20px 0px rgb(119, 119, 119);
+}
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
     .grid {
@@ -297,6 +404,18 @@ a:link, a:visited, a:hover, a:active {
     .header-image {
         height: 400px;
     }
+
+    .portfolio-card-pic {
+        height: 250px;
+    }
+
+    .portfolio-card-desc {
+        font-size: 1.25em;
+    }
+
+    .portfolio-card-button-holder {
+        font-size: 1.4em;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -320,7 +439,7 @@ a:link, a:visited, a:hover, a:active {
     }
 
     .info {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .musician.icon > img {
@@ -350,6 +469,27 @@ a:link, a:visited, a:hover, a:active {
     .header-image {
         height: 300px;
     }
+
+    .bio-heading {
+        grid-column: 3 / 11;
+    }
+
+    .bio-paragraph {
+        grid-column: 3 / 11;
+    }
+    
+    .portfolio-card-desc {
+        font-size: 1.1em;
+    }
+
+    .portfolio-card-button-holder {
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+
+    .portfolio-card-pic {
+        height: 200px;
+    }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 768px) {
@@ -365,8 +505,16 @@ a:link, a:visited, a:hover, a:active {
     }
 
     #header-nav {
-        padding-top: 45px;
+        padding-top: 20px;
         color: white;
+    }
+
+    #about-me-nav {
+        display: block;
+    }
+
+    #portfolio-nav {
+        display: block;
     }
 
     .banner-name {
@@ -406,14 +554,6 @@ a:link, a:visited, a:hover, a:active {
         grid-column: 1;
     }
 
-    .musician.icon > img {
-        width: 50vw;
-    }
-
-    .musician.icon:hover img {
-        width: 55vw;
-    }
-
     .developer.icon {
         grid-row: 1;
         font-size: 15vw;
@@ -429,6 +569,15 @@ a:link, a:visited, a:hover, a:active {
         grid-row: 3;
         padding-bottom: 7vw;
         border-bottom: solid 5px var(--light);
+    }
+
+    .musician.icon > img {
+        width: 50vw;
+        padding-top: 22vw;
+    }
+
+    .musician.icon:hover img {
+        width: 55vw;
     }
     
     .musician.icon {
@@ -481,5 +630,77 @@ a:link, a:visited, a:hover, a:active {
         background-image: url("/images/profile/square-pic-50.webp");
         border-radius: 0%;
         box-shadow: none;
+    }
+
+    .bio-heading {
+        grid-column: 2 / 12;
+    }
+
+    .bio-paragraph {
+        grid-column: 2 / 12;
+        font-size: 1.15em;
+    }
+
+    .portfolio-grid {
+        margin-top: 0px;
+    }
+
+    .portfolio-heading {
+        grid-column: 1;
+        text-align: center;
+        font-family: var(--sans-serif-font);
+        font-size: 8.17vw;
+        margin-bottom: 40px;
+        margin-top: 60px;
+        color: var(--light);
+    }
+
+    .portfolio-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-bottom: 20px;
+    }
+    
+    .portfolio-card-head {
+        grid-column: 1;
+        grid-row: 1;
+        font-family: var(--serif-font);
+        text-align: center;
+        font-size: 6vw;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .portfolio-card-pic {
+        grid-column: 1;
+        grid-row: 2;
+        margin: auto;
+        height: 45vw;
+        box-shadow: 0px 0px 20px 0px rgb(119, 119, 119);
+        margin-bottom: 30px;
+    }
+    
+    .portfolio-card-desc {
+        grid-column: 1;
+        grid-row: 3;
+        font-family: var(--serif-font);
+        font-size: 1.15em;
+        line-height: 1.45;
+        margin-top: 0;
+    }
+    
+    .portfolio-card-button-holder {
+        grid-column: 1;
+        grid-row: 4;
+        text-align: center;
+        font-size: 1.3em;
+        font-family: var(--sans-serif-font);
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .portfolio-card-button:hover {
+        color: var(--color);
     }
 }
