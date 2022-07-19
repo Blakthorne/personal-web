@@ -299,9 +299,20 @@ a:link, a:visited, a:hover, a:active {
 
 .portfolio-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 600px 1fr;
     grid-template-rows: min-content 1fr min-content;
-    margin-bottom: 20px;
+    position: relative;
+}
+
+.portfolio-card:before {
+    content: " ";
+    height: calc(100% + 40px);
+    width: 200px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    border: 1px solid var(--light);
+    border-right-width: 0;
 }
 
 .portfolio-card-head {
@@ -317,10 +328,10 @@ a:link, a:visited, a:hover, a:active {
     grid-column: 1;
     grid-row: 2;
     font-family: var(--serif-font);
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 1.45;
     margin-top: 0;
-    padding-right: 25px;
+    padding-right: 40px;
 }
 
 .portfolio-card-button-holder {
@@ -330,7 +341,6 @@ a:link, a:visited, a:hover, a:active {
     margin: auto;
     font-size: 1.5em;
     font-family: var(--sans-serif-font);
-    margin-bottom: 15px;
 }
 
 .portfolio-card-button-holder:hover {
@@ -351,7 +361,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .portfolio-card-pic {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1 / 4;
     margin: auto;
     height: 300px;
@@ -408,6 +418,10 @@ a:link, a:visited, a:hover, a:active {
 
     .header-image {
         height: 400px;
+    }
+
+    .portfolio-card {
+        grid-template-columns: 550px 1fr;
     }
 
     .portfolio-card-pic {
@@ -481,6 +495,10 @@ a:link, a:visited, a:hover, a:active {
 
     .bio-paragraph {
         grid-column: 3 / 11;
+    }
+
+    .portfolio-card {
+        grid-template-columns: 400px min-content;
     }
     
     .portfolio-card-desc {
@@ -648,6 +666,7 @@ a:link, a:visited, a:hover, a:active {
 
     .portfolio-grid {
         margin-top: 0px;
+        margin-bottom: 60px;
     }
 
     .portfolio-heading {
@@ -663,6 +682,12 @@ a:link, a:visited, a:hover, a:active {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+    }
+
+    .portfolio-card:before {
+        width: 100px;
+        height: 100%;
+        top: 0px;
     }
     
     .portfolio-card-head {
@@ -689,6 +714,6 @@ a:link, a:visited, a:hover, a:active {
         grid-column: 1;
         grid-row: 4;
         font-size: 1.3em;
-        padding: 15px;
+        padding: 20px;
     }
 }
