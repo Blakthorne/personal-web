@@ -289,11 +289,11 @@ a:link, a:visited, a:hover, a:active {
     grid-column: 1;
     text-align: left;
     font-family: var(--sans-serif-font);
-    font-size: 3em;
+    font-size: 4em;
     font-variant-caps: small-caps;
     font-weight: 200;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 80px;
+    margin-top: 80px;
     color: var(--light);
 }
 
