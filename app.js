@@ -18,18 +18,6 @@ app.get('/portfolio/', (req, res) => {
     res.sendFile(path.join(__dirname + '/views/portfolio.html'));
 })
 
-app.get('/musician/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/musician.html'));
-})
-
-app.get('/developer/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/developer.html'));
-})
-
-app.get('/learner/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/views/learner.html'));
-})
-
 app.listen(port, () => {
  console.log(`App listening at http://localhost:${port}`);
 });

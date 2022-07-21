@@ -18,11 +18,19 @@ body {
     margin: 0;
 }
 
+.p-link {
+    font-weight: 500;
+    text-decoration: underline !important;
+}
+
+.p-link:hover {
+    text-decoration: none !important;
+}
+
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
     color: inherit;
 }
-
 .grid {
     display: grid;
     grid-template-columns: 1fr repeat(10, 115px) 1fr;
@@ -47,7 +55,6 @@ a:link, a:visited, a:hover, a:active {
     text-align: right;
     font-family: var(--sans-serif-font);
     font-size: 2em;
-    font-style: normal;
     padding-top: 40px;
 }
 
@@ -238,49 +245,28 @@ a:link, a:visited, a:hover, a:active {
     margin-bottom: 50px;
 }
 
-.bio-heading {
+.bio {
     grid-column: var(--text-start) / var(--text-end);
     text-align: left;
+    margin-bottom: 30px;
+}
+
+.bio-heading {
     font-family: var(--sans-serif-font);
     font-size: 2.3em;
     font-weight: 100;
     color: var(--light);
-    margin-bottom: -15px;
     font-variant-caps: small-caps;
     letter-spacing: 3px;
+    margin-bottom: 0px;
 }
 
 .bio-paragraph {
-    grid-column: var(--text-start) / var(--text-end);
-    text-align: left;
     font-family: var(--serif-font);
     font-size: 1.5em;
-    line-height: 1.45;
+    line-height: 1.4;
     hyphens: auto;
-}
-
-#developer {
-    grid-row: 3;
-}
-
-#developer-paragraph {
-    grid-row: 4;
-}
-
-#musician {
-    grid-row: 5;
-}
-
-#musician-paragraph {
-    grid-row: 6;
-}
-
-#learner {
-    grid-row: 7;
-}
-
-#learner-paragraph {
-    grid-row: 8;
+    margin-top: 10px;
 }
 
 .portfolio-grid {
@@ -319,6 +305,7 @@ a:link, a:visited, a:hover, a:active {
     top: -20px;
     border: 1px solid var(--light);
     border-right-width: 0;
+    z-index: -1;
 }
 
 .portfolio-card-head {
@@ -335,6 +322,7 @@ a:link, a:visited, a:hover, a:active {
     grid-row: 2;
     font-family: var(--serif-font);
     font-size: 1.3em;
+    font-weight: 400;
     line-height: 1.45;
     margin-top: 0;
     padding-right: 40px;
@@ -500,11 +488,7 @@ a:link, a:visited, a:hover, a:active {
         height: 300px;
     }
 
-    .bio-heading {
-        grid-column: 3 / 11;
-    }
-
-    .bio-paragraph {
+    .bio {
         grid-column: 3 / 11;
     }
 
@@ -666,13 +650,13 @@ a:link, a:visited, a:hover, a:active {
         box-shadow: none;
     }
 
-    .bio-heading {
+    .bio {
         grid-column: 2 / 12;
     }
 
     .bio-paragraph {
-        grid-column: 2 / 12;
         font-size: 1.15em;
+        line-height: 1.45;
     }
 
     .portfolio-grid {
