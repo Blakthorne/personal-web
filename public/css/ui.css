@@ -24,6 +24,7 @@ body {
     font-variant-caps: small-caps;
     font-size: .9em;
     letter-spacing: 2px;
+    transition: opacity .1s linear 0s;
 }
 
 .p-link:hover {
