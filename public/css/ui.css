@@ -2,7 +2,6 @@
     /* color variables */
     --light: #a2a3a4;
     --color: #2ca0d6;
-    --color-header: #2ca0d6b7;
     --content-start: 2;
     --content-mid: 7;
     --content-end: 12;
@@ -421,6 +420,10 @@ a:link, a:visited, a:hover, a:active {
         height: 400px;
     }
 
+    .bio-paragraph {
+        font-size: 1.3em;
+    }
+
     .portfolio-card {
         grid-template-columns: 550px 1fr;
     }
@@ -491,6 +494,10 @@ a:link, a:visited, a:hover, a:active {
 
     .bio {
         grid-column: 3 / 11;
+    }
+
+    .bio-paragraph {
+        font-size: 1.3em;
     }
 
     .portfolio-card {
