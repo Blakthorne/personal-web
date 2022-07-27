@@ -11,11 +11,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about-me/', (req, res) => {
-    res.sendFile(__dirname + '/about-me.html');
+    res.sendFile('/about-me.html');
 })
 
 app.get('/portfolio/', (req, res) => {
-    res.sendFile(__dirname + '/portfolio.html');
+    res.sendFile('/portfolio.html');
 })
 
 app.listen(port, () => {
