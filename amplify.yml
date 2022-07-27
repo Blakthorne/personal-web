@@ -5,8 +5,7 @@ frontend:
       commands:
         - npm ci
     build:
-      commands:
-        - node app.js
+      commands: node app.js
   artifacts:
     baseDirectory: /
     files:
