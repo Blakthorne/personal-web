@@ -7,7 +7,7 @@ frontend:
     build:
       commands: node app.js
   artifacts:
-    baseDirectory: /
+    baseDirectory: views
     files:
       - '**/*'
   cache:
