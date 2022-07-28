@@ -244,7 +244,7 @@ a:link, a:visited, a:hover, a:active {
     position: relative;
     background-size: contain;
     background-position: center;
-    background-image: url("/images/profile/square-pic-50.webp");
+    background-image: url("/public/images/profile/square-pic-50.webp");
     border-radius: 100%;
     box-shadow: 10px 15px 50px 20px rgb(119, 119, 119);
     margin-bottom: 50px;
