@@ -3,8 +3,8 @@ document.getElementById("header").innerHTML =
       '<img id="logo" src="/public/images/icon.svg" alt="icon">' +
 '</a>' +
 '<nav id="header-nav">' +
-'<a href="/public/about-me/" id="about-me-nav">About Me</a>' +
-'<a href="/public/portfolio/" id="portfolio-nav">Portfolio</a>' +
+'<a href="/about-me" id="about-me-nav">About Me</a>' +
+'<a href="/portfolio" id="portfolio-nav">Portfolio</a>' +
 '</nav>';
 
 document.getElementById("footer").innerHTML =
